@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TẠo Form</title>
+    <style>
+        .form{
+            font-family:"Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+<form action="Simpleform.html" method="get" class="form">
+    <fieldset>
+    <h1>ORDER FORM</h1>
+    <P>What would you like to buy?</P>
+    <select name="type" id="">
+        <option value="A">A</option>
+        <option value="B">B (+ 0.5$)</option>
+        <option value="C">C (+ 0.5$)</option>
+    </select>
+    <p>How many would you like to order?</p>
+    <input type="radio" value="rd">1 - 10$<br>
+    <input type="radio" value="rd">2 - 15$<br>
+    <input type="radio" value="rd">3 - 20%<br>
+    <p>Name <span style=color:red>*</span> </p>
+        <input type="text" name="firstname" placeholder="FirstName" size="15">
+        <input type="text" name="lastname" placeholder="LastName" size="15">
+     <p>Email</p>
+        <input type="text" name="email">
+        <p>Phone Number</p>
+        <input type="text" name="nb"size="5"> -
+        <input type="text" name="nb" size="5"> -
+        <input type="text" name="nb" size="5"><br>
+        <input type="submit" name="btsubmit" value="Submit">
+    </fieldset>
+</form>
+</body>
+</html>
