@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form đăng ký người dùng</title>
+    <style>
+        input{
+            float: left;
+        }
+        label{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
+    <p>Họ và tên:</p>
+    <input type="text" name="name" id="name" value=""><br>
+    <p>Email:</p>
+    <input type="text" name="email" id="email" value=""><br>
+    <p>Số điện thoại:</p>
+    <input type="text" name="email" id="phone" value=""><br>
+    <p>giới tính:</p>
+    <label for="nam"><input type="radio" name="gender" id="nam">Nam</label>
+    <label for="nu"><input type="radio" name="gender" id="nu">Nữ</label> <br><br>
+    <input type="submit" name="btsubmit" value="Đăng ký">
+</form>
+</body>
+</html>

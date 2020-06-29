@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sở Thích Cá Nhân</title>
-    <link rel="stylesheet" href="simpleform.css">
+    <title>Tạo form cơ bản</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<h1>SỞ THÍCH CỦA BẠN</h1>
-<div id="id1">
-    <form action="Createsimpleform.html" id="form">
-        <div class="row">
-        <p>họ và tên</p><input type="text" name="name"><br>
-        <p>email</p><input type="text" name="email"><br>
-        <p>sở thích</p>
-        </div>
+<div class="form">
+    <form action="">
+        <div id="demo"><h3>SỞ THÍCH CỦA BẠN</h3></div>
         <div>
-        <input type="checkbox" name="hobby" value="thể thao" id="hb1" class="1">thể thao
-        <input type="checkbox" name="hobby" value="thể thao"class="1">âm nhạc
-        <input type="checkbox" name="hobby" value="thể thao"class="1">đọc sách
-            </div>
-            <div>
-        <input type="checkbox" name="hobby" value="thể thao"class="1">lướt web
-        <input type="checkbox" name="hobby" value="thể thao"class="1">chơi game
-        <input type="checkbox" name="hobby" value="thể thao"class="1">điện ảnh
-            </div>
-            <div>
-        <input type="checkbox" name="hobby" value="thể thao"class="1">du lịch
-            </div>
+            <p>Họ và tên: <input type="text"></p>
+            <p id="p">Mail: <input type="email"></p>
         </div>
-        <div>
-            <label for="submit"></label>
-        <input type="submit" name="btsubmit" value="Gửi thông tin" id="submit">
-            <label for="reset"></label>
-        <input type="reset" name="reset" value="Nhập lại" id="reset">
+        <div id="demo3">
+            <p>Sở thích:
+                <label for="a"  style="margin-right: 40px"><input type="checkbox" id="a">Thể thao</label>
+                <label for="b"  style="margin-right: 40px"><input type="checkbox" id="b">Âm nhạc</label>
+                <label for="c" style="padding-right: 60px"><input type="checkbox" id="c">Đọc sách</label>
+                <label for="d" style="margin-left: 68px ; margin-right: 33px"><input type="checkbox" id="d">Lướt Web</label>
+                <label for="e" style="margin-right: 26px"><input type="checkbox" id="e">Chơi game</label>
+                <label for="f" style=" margin-right: 40px"><input type="checkbox" id="f">Điện ảnh</label>
+                <label for="g" style="padding-left: 67px; margin-right: 40px"><input type="checkbox" id="g">Du lịch</label>
+            </p>
+        </div>
+        <div id="ip">
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
         </div>
     </form>
 </div>
