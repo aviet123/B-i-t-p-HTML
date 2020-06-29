@@ -1,0 +1,22 @@
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    font-size: 80%;
+    width: auto;
+    height: auto;
+}
+h1{
+    text-align: center;
+}
+p{
+    display: inline;
+}
+form{
+    text-align: center;
+}
+.row{
+    float: left;
+}
+* {
+    float: left;
+    align-content: center;
+}
