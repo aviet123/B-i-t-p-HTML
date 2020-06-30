@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<button type="button" onclick="showmess();">click me</button>
+<button type="button" onclick="showmess1();">click me</button>
+<div id="messdiv"></div>
+<button type="button" onclick="showmess2();">click me</button>
+<button type="button" onclick="showmess3();">click me</button>
+<script>
+    function showmess1() {
+        alert('xin chào')
+
+    }
+    function showmess2() {
+        document.getElementById('messdiv').innerText = 'xin chao'
+
+    }
+    function showmess3() {
+        document.write('xin chaogit ')
+
+    }
+    function showmess() {
+       console.log('xin chao')
+    }
+</script>
+</body>
+</html>
