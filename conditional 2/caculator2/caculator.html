@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 350px;
+            height: 50px;
+            text-align: right;
+        }
+        #caculator{
+            width: 320px;
+            height: 520px;
+            background-color: #eaedef;
+            margin : 0 auto;
+            top: 20px;
+            position: relative;
+            border: 1px ;
+        }
+        table{
+            border-collapse: collapse;
+
+
+        }
+        td{
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            margin: 10px 10px 10px 10px;
+            background-color: #dddddd;
+        }
+        button{
+            width: 80px;
+            height: 80px;
+            color: blue;
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="caculator">
+<form>
+<table >
+    <tr>
+        <td colspan="4"><input id="hien" type="text" disabled></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="show(1)">1</button></td>
+        <td><button type="button" onclick="show(2)">2</button></td>
+        <td><button type="button" onclick="show(3)">3</button></td>
+        <td><button type="button" onclick="show('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="show(4)">4</button></td>
+        <td><button type="button" onclick="show(5)">5</button></td>
+        <td><button type="button" onclick="show(6)">6</button></td>
+        <td><button type="button" onclick="show('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="show(7)">7</button></td>
+        <td><button type="button" onclick="show(8)">8</button></td>
+        <td><button type="button" onclick="show(9)">9</button></td>
+        <td><button type="button" onclick="show('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="reseta()">C</button></td>
+        <td><button type="button" onclick="show(0)">0</button></td>
+        <td><button type="button" onclick="operator('=')">=</button></td>
+        <td><button type="button" onclick="show('/')">/</button></td>
+    </tr>
+
+</table>
+</form>
+</div>
+<script src="caculator.js"></script>
+</body>
+</html>
