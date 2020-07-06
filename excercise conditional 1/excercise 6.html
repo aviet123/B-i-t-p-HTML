@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>doanh thu bán được :</p>
+<input type="text" id="doanhthu">
+<p>phần trăm hoa hồng là:</p>
+<input type="text" id="commiss">
+<button type="button" onclick="check()">check</button>
+
+<script>
+    function check() {
+        var a = parseFloat(document.getElementById('doanhthu').value);
+        var b = parseFloat(document.getElementById('commiss').value);
+         phantram = b/100;
+         doanhthu = a * phantram;
+         alert('doanh thu tháng là:' + doanhthu)
+
+    }
+</script>
+</body>
+</html>

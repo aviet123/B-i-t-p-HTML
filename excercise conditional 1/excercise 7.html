@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền cước điện thoại hộ gia đình</title>
+</head>
+<body>
+<label for="trongnuoc">Số phút gọi trong nước:</label><br>
+<input type="text" id="trongnuoc"><br>
+<label for="ngoainc">Số phút gọi quốc tế</label><br>
+<input type="text" id="ngoainc"><br>
+<label for="sms">Số tin nhắn</label><br>
+<input type="text" id="sms"><br>
+<input type="button" id="btn" value="Tính" onclick="tinhCuoc()"><br>
+<label for="print">Số tiền cước điện thoại tháng này:</label><br>
+<input type="text" id="print" disabled >
+</body>
+<script>
+    var giatronnc = 700;
+    const giangoaiquoc = 1000;
+    const smsprice = 200;
+    function tinhCuoc() {
+        var trongnc = parseFloat(document.getElementById("trongnuoc").value);
+        var ngoainc = parseFloat(document.getElementById("ngoaincgit").value);
+        var sms = parseInt(document.getElementById("sms").value);
+
+        domesticpay = giatronnc * trongnc;
+        internationalpay = giangoaiquoc * ngoainc;
+        sms_pay = sms * smsprice;
+
+        var amount = domesticpay + internationalpay + sms_pay;
+
+        document.getElementById("print").value = amount;
+    }
+</script>
+</html>

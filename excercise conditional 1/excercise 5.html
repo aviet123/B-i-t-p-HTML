@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var score1 = parseFloat(prompt('nhập điểm kiểm tra'));
+    var score2 = parseFloat(prompt('nhập điểm kiểm tra giữa kỳ'));
+    var score3 = parseFloat(prompt('nhập điểm kiểm tra cuối kỳ'));
+     averange = (score1+(score2*2)+(score3*3))/6;
+    if (averange > 8.0){
+        alert('học lực giỏi');
+    }else if (averange >= 6.5){
+        alert('học lực khá');
+    }else if (averange > 4.0){
+        alert('học sinh trung bình');
+    }else {
+        alert('học sinh yếu');
+    }
+</script>
+</body>
+</html>
