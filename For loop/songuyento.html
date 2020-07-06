@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var numbers = parseInt(prompt('nhập vào liệt kê số nt:'))
+    var count = 0;
+    var N = 2;
+    let a=numbers*2-1
+    while (count<a){
+        if (N == 2){
+            document.write(N+'<br>');
+        }else if (N%2 !== 0 && N%3 == 0){
+            document.write(N+'<br>');
+        }
+        count++;
+        N++;
+
+    }
+
+
+</script>
+</body>
+</html>

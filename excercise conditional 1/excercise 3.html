@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max and Min</title>
+</head>
+<body>
+<p>nhập a</p><input type="text" id="a">
+<p>nhập b</p><input type="text" id="b">
+<p>nhập c</p><input type="text" id="c">
+<button type="button" onclick="check()">check max</button>
+
+<script>
+    function check() {
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = parseInt(document.getElementById('c').value);
+
+        if ( a < b && c < b){
+            alert(b + 'là số lớn nhât');
+        }else if (b < a && c < a){
+            alert(a + 'là số lớn nhất');
+        }else if (a < c && b < c){
+            alert(c + 'là số lớn nhất');
+        }
+
+    }
+</script>
+</body>
+</html>

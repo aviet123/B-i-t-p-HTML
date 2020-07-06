@@ -1,20 +1,22 @@
-function check() {
+function check(num) {
     var Good = document.getElementById('good');
     var Cheap = document.getElementById('cheap');
     var Fast = document.getElementById('fast');
 
-    switch (Good == true) {
-        case Cheap:
-            Fast = false;
-            break;
-        case Fast:
-            Cheap = false;
-            break;
+    if (Good.checked == Fast.checked == true)
+    {if (num == 1) {
+        document.getElementById('cheap').checked = false;
     }
-    switch (Fast == true) {
-        case Cheap:
-            Good = false;
-            break;
+    }
+    if (Fast.checked == Cheap.checked == true)
+    {if (num == 2) {
+        document.getElementById('good').checked = false;
+    }
+    }
+    if (Cheap.checked == Good.checked == true)
+    {if (num == 3) {
+        document.getElementById('good').checked = false;
+    }
     }
 
 }

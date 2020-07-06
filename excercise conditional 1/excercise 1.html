@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 1</title>
+</head>
+<body>
+<p>nhập tuổi</p>
+<input type="text" id="age" >
+<button type="button" onclick="check()">check tuổi</button>
+
+<script>
+    function check() {
+        var age = document.getElementById('age').value;
+        if (age > 15){
+            alert('đủ tuổi vào lớp 10')
+        }else {
+            alert('không đủ tuổi vào lớp 10')
+        }
+
+    }
+</script>
+</body>
+</html>
