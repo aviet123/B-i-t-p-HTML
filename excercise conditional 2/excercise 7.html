@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="number1">nhập  a</label>
+<input type="text" id="number1">
+<label for="number2">nhập  b</label>
+<input type="text" id="number2">
+<label for="number3">nhập  c</label>
+<input type="text" id="number3">
+<button type="button" onclick="check()">check</button>
+<div id="S"></div>
+
+<script>
+    function check() {
+        let a = parseFloat(document.getElementById('number1').value);
+        let b = parseFloat(document.getElementById('number2').value);
+        let c = parseFloat(document.getElementById('number3').value);
+        let delta = (b*b) - 4*(a*c);
+        let nghiem1;
+        let nghiem2;
+        if (delta === 0){
+            nghiem1 = nghiem2 = -b/2*a;
+            document.getElementById('S').innerHTML = "nghiệm 1 là " + nghiem1 + 'nghiệm 2 là' + nghiem2 ;
+        }else if (delta > 0) {
+            nghiem1 = (-b - Math.sqrt(delta))/2*a;
+            nghiem2 = (-b + Math.sqrt(delta))/2*a;
+            document.getElementById('S').innerHTML = "nghiệm 1 là " + nghiem1 + 'nghiệm 2 là' + nghiem2 ;
+        }else {
+            alert('phương trình vô nghiệm');
+        }
+
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="number1">nhập  a</label>
+<input type="text" id="number1">
+<label for="number2">nhập  b</label>
+<input type="text" id="number2">
+<button type="button" onclick="check()">check</button>
+<div id="S"></div>
+
+<script>
+    function check() {
+        let a = parseFloat(document.getElementById('number1').value);
+        let b = parseFloat(document.getElementById('number2').value);
+
+        if (a === 0){
+            alert('phương trình vô nghiệm')
+        }else {
+            nghiem = -b/a;
+            document.getElementById('S').innerHTML = "nghiệm của phương trình là " + nghiem ;
+        }
+
+
+
+    }
+</script>
+</body>
+</html>

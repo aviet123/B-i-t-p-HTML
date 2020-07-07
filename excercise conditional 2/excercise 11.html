@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="salary">Nhập số tiền lương</label>
+<input type="text" id="salary">
+
+<button type="button" onclick="check()">check thuế</button>
+<div id="S"></div>
+<script>
+    function check() {
+        let tienluong = document.getElementById('salary').value;
+        const bac1 = 5/100;
+        const bac2 = 10/100;
+        const bac3 = 15/100;
+        const bac4 = 20/100;
+        if (tienluong <= 5000000){
+            thue = tienluong * bac1;
+        }else if (tienluong < 10000000){
+            thue = tienluong * bac2 - 250000;
+        }else if (tienluong < 18000000){
+            thue = tienluong * bac3 - 750000;
+        }else if (tienluong < 30000000){
+            thue = tienluong * bac4 - 1600000;
+        }document.getElementById('S').innerHTML = thue;
+    }
+
+
+
+</script>
+</body>
+</html>

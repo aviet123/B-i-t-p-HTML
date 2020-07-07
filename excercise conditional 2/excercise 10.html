@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="sodien">Nhập số điện tiêu thụ</label>
+<input type="text" id="sodien">
+<label for="special">tôi là sinh viên</label>
+<input type="checkbox" id="special">
+<button type="button" onclick="check()">check tiền điện</button>
+<div id="S"></div>
+<script>
+    function check() {
+        let sodien = document.getElementById('sodien').value;
+        let sinhvien = document.getElementById('special');
+        const bac1 = 1510;
+        const bac2 = 1813;
+        const bac3 = 2834;
+        const bacsv = 4000;
+        if (sodien < 50){
+            tiendien = sodien * bac1;
+            alert(' tiền điền là ' + tiendien)
+        }else if (sodien > 100){
+            tiendien = sodien * bac2;
+            alert(' tiền điền là ' + tiendien)
+        }else if (sodien >200){
+            tiendien = sodien * bac3;
+            alert(' tiền điền là ' + tiendien)
+        }else if (sinhvien.checked == true){
+            tiendien = sodien * bacsv;
+            document.getElementById('S').checked = tiendien;
+            alert(tiendien);
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

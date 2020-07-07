@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="length">nhập chiều dài</label>
+<input type="text" id="length">
+<label for="width">nhập chiều rộng</label>
+<input type="text" id="width">
+<button type="button" onclick="check()">check</button>
+<div id="S"></div>
+
+<script>
+    function check() {
+        let length = parseFloat(document.getElementById('length').value);
+        let width = parseFloat(document.getElementById('width').value);
+        if ( width === length){
+            alert('đây không phải hình chữ nhật');
+        }else{
+            dientich = length * width;
+            document.getElementById('S').innerHTML = 'diện tích hình chữ nhật là: ' + dientich;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="met">nhập mét</label>
+<input type="text" id="met">
+<button type="button" onclick="check()">check</button>
+
+<script>
+    function check() {
+        let M = parseFloat(document.getElementById('met').value);
+        let feet = M * 3.2808;
+
+        alert(' số feet là ' + feet);
+
+    }
+</script>
+</body>
+</html>

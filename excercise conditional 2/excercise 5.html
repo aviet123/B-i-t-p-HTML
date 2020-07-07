@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="canha">nhập cạnh a</label>
+<input type="text" id="canha">
+<label for="width">nhập cạnh b</label>
+<input type="text" id="canhb">
+<button type="button" onclick="check()">check</button>
+<div id="S"></div>
+
+<script>
+    function check() {
+        let a = parseFloat(document.getElementById('canha').value);
+        let b = parseFloat(document.getElementById('canhb').value);
+        let dientich;
+        if ( a === b){
+            alert('đây là tam giác vuông cân');
+        }else{
+            dientich = (a * b) * 0.5;
+            document.getElementById('S').innerHTML = 'diện tích tam giác là: ' + dientich;
+        }
+    }
+</script>
+</body>
+</html>
+</body>
+</html>
