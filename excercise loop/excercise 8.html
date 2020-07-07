@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+số Min:
+<input type="text" id="min">
+số Max:
+<input type="text" id="max">
+<button type="button" onclick="ranDom()">random</button>
+<script>
+    function ranDom() {
+        var Min = document.getElementById('min').value;
+        var Max = document.getElementById('max').value;
+        var x = Math.floor((Math.random()* (Max-Min)) + Min);
+
+        for (let i = 0; i < 3; i++) {
+            var guess = +prompt("số nhập vào:");
+            if(guess == x){
+                alert('chúc mừng đoán đúng kết thúc lượt chơi:');
+            }else if (x < guess){
+                alert('vui lòng nhập lại:');
+            }else {
+                alert('sai rồi nhập lại')
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>

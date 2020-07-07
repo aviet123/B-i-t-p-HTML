@@ -8,28 +8,26 @@
 <script>
     var N = +prompt('nhập số N cần liệt kê');
     function isPrime(number) {
-        if (number<2){
-            return false;
-        }
-        for (let i = 2; i < number-1; i++) {
-            if (number % i == 0){
-                return false;
+
+        for (let i = 2; i < N; i++) {
+            if (number % 7 == 0){
+                return true
             }
         }
-        return true;
+        return false;
+
     }
     display(N);
     function display(N) {
-        let number = 1;
+        let number = 1; var sum = 0;
         let count = 0;
         while (count < N) {
             if (isPrime(number)) {
                 count++;
-                document.write(number + " ") ;
-
-            }
-            number++;
-        }
+                document.write(number) ;
+                sum += number;
+            }number++;
+        }alert(sum);
     }
 
 
