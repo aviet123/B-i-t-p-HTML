@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Array = [12,23,3,44,5,6,7,8,9,10];
+    let Sum = 0;
+    let MaxNumber = Math.max.apply(Math, Array);
+    document.write('số max là: ' + MaxNumber + '<br>');
+    for (let i = 0; i < Array.length; i++) {
+        Sum += Array[i];
+        trungbinh = Sum/Array.length;
+
+
+    }document.write('trung bình của mảng là: '+trungbinh);
+
+
+</script>
+</body>
+</html>

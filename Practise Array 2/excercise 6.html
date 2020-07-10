@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Array = prompt('nhập chuỗi');
+    let ArrNew = Array.split('');
+    for (let i = 0; i < ArrNew.length; i++) {
+        if (ArrNew[i] === '-'){
+            ArrNew[i] = '_';
+        }
+    }alert(ArrNew);
+
+</script>
+</body>
+</html>

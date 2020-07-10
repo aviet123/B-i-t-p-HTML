@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let student = [
+        {
+            id: 1,
+            name: ' nguyen van a',
+            address: 'ha noi'
+
+        },
+        {
+            id: 2,
+            name: ' nguyen van a',
+            address: 'ha noi'
+
+        },
+        {
+            id: 3,
+            name: ' nguyen van a',
+            address: 'ha noi'
+
+        }
+    ];
+    console.log(student);
+    for (let i = 0; i < student.length; i++) {
+        if (student[i].id === 2){
+            student.splice(i,2);
+
+        }
+
+    }
+</script>
+</body>
+</html>

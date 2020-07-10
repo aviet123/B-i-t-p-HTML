@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Insert Dashes between specific numbers</h1>
+<script>
+    let N = +prompt('nhập số vào: ');
+    let Arrs = N.toString();
+    let Print =  [Arrs[N]];
+    for (let i = 1; i < Arrs.length ; i++) {
+        if (Arrs[i-1]%2 === 0 && Arrs[i]%2 === 0){
+            Print.push('-' , Arrs[i]);
+        }else {
+            Print.push(Arrs[i]);
+        }
+
+    }
+    document.write(Print.join(''));
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1><b>Typing Anything Slowly</b></h1>
+<form action="">
+<label for="Text"></label>
+<textarea name="" id="Text" cols="50" rows="10" onkeyup="typing()">
+</textarea>
+</form>
+<script>
+let str = "Tuy vậy, bệnh tật không thể làm mất đi tính cách bên trong của bố, bố luôn là một người đầy nghị lực, giàu tự tin và hết lòng thương yêu gia đình. Gia đình tôi không khá giả, mọi chi tiêu trong gia đình đều phụ thuộc vào đồng tiền bố mẹ kiếm được hàng ngày";
+let count = 0;
+let Display = "";
+function typing() {
+    if (Display === str){
+        Display = '';
+        return str;
+    }else {
+        Display += str[count];
+        count++;
+        document.getElementById('Text').value = Display;
+    }
+}
+</script>
+</body>
+</html>

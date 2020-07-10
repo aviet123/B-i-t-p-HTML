@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Viet-EngLish Dictionary</h1>
+<form action="">
+    <label for="find"></label>
+    <input type="text" id="find">
+    <div id="result"></div>
+    <button type="button" onclick="covert()">chuyển đổi</button>
+
+</form>
+<script>
+    function covert() {
+        let vietnamese = ['quần áo', 'tình yêu', 'sâu','mèo méo meo'];
+        let english = ['clothes', 'love', 'worm','mr bo'];
+        let found = document.getElementById('find').value;
+        for (let i = 0; i < 3; i++) {
+            if (found === vietnamese[i]) {
+                document.getElementById('result').innerHTML = english[i];
+            } else if (found === english[i]) {
+                document.getElementById('result').innerHTML = vietnamese[i];
+            } else{
+                alert('từ này không có');
+            }
+        }
+    }
+</script>
+</body>
+</html>
