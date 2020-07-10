@@ -8,16 +8,14 @@
 <script>
     let chuoi1 = prompt('nhập chuỗi 1: ');
     let chuoi2 = prompt('nhập chuỗi 2: ');
-
-    for (let a of chuoi1){
-        console.log(a);
-    }
-    for (let b of chuoi2){
-        console.log(b);
-    }
-    if (a === b){
-        alert()
-    }
+    arr1 = chuoi1.split('');
+    arr2 = chuoi2.split('');
+   function check() {
+      switch (arr1.length) {
+          case arr2.length :
+              return true;
+      }
+   }
 </script>
 </body>
 </html>
