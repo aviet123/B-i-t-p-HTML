@@ -10,11 +10,18 @@
     let chuoi2 = prompt('nhập chuỗi 2: ');
     arr1 = chuoi1.split('');
     arr2 = chuoi2.split('');
-   function check() {
-      switch (arr1.length) {
-          case arr2.length :
-              return true;
-      }
+    let check = true;
+   if (arr2.length === arr1.length){
+       for (let i = 0; i <arr1.length ; i++) {
+           check = arr1[i] === arr2[i];
+           
+       }if (check){
+           alert('hai chuoi giong nhau');
+       }else {
+           alert('không giống nhau');
+       }
+   }else {
+       alert('không giống nhau');
    }
 </script>
 </body>

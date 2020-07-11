@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" oninput="caculate()"> Foot is converted to <span id="output"></span><br>
+<input type="text" id="input1" oninput="caculate1()"> Meter is converted to <span id="output1"></span>
+<script>
+    function MeterToFoot(meter) {
+        return 3.279 * meter;
+    }
+    function FootToMeter(Foot) {
+        return 0.305 * Foot;
+    }
+    function caculate() {
+        let input = document.getElementById('input').value;
+        let result = FootToMeter(input);
+        document.getElementById('output').innerHTML = result + 'meter';
+
+    }
+    function caculate1() {
+        let input1 = document.getElementById('input1').value;
+        let result1 = MeterToFoot(input1);
+        document.getElementById('output1').innerHTML = result1 + 'feet';
+
+    }
+
+</script>
+</body>
+</html>
