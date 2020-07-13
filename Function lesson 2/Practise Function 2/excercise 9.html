@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Array = ['a','b','a','c','b','d','f','g','h','j','e','r','t','w','t','t'];
+    function CheckArray(a) {
+        let count = 0;
+        for (let i = 0; i < Array.length; i++) {
+            if (a === Array[i]){
+                a = Array[i];
+                count++;
+            }
+        }return count;
+    }
+    let N = prompt('nhập N');
+    let result = CheckArray(N);
+    if (result <= 0){
+        alert(-1);
+    }else
+    alert(N+ 'xuất hiện '+result+' lần');
+
+</script>
+</body>
+</html>

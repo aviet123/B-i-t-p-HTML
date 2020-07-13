@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let b = 1
+    function giai_thua(a) {
+        for (let i = 1; i <= a; i++) {
+            b = b*i;
+        }
+        return b;
+
+    }
+    let N = +prompt('nhập số tính giai thừa');
+    let result = giai_thua(N);
+    alert(result);
+</script>
+</body>
+</html>

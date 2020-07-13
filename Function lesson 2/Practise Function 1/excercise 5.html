@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    let Constellation = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+    function StarCompareToCons(a) {
+        for (let i = 0; i < Star.length; i++) {
+            if (a === Star[i]){
+                a = Constellation[i];
+                return a;
+            }
+        }
+        return false;
+    }
+
+    let N = prompt("nhập vào sao cần tìm");
+    let result = StarCompareToCons(N);
+    if (result){
+        alert(result)
+    }else {
+        alert('không có sao này')
+    }
+
+
+</script>
+</body>
+</html>

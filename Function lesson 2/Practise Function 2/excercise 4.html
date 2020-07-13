@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function isNumber(a) {
+       if (a > 0 || a <= 0){
+           return true;
+       }else {
+           return false;
+       }
+
+   }
+   let N = prompt('nhập vào ký tự cần check');
+   let result = isNumber(N);
+   if (result){
+       alert('đây là ký tự số');
+   }else {
+       alert('đây k là ký tự số');
+   }
+</script>
+</body>
+</html>

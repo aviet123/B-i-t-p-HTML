@@ -1,0 +1,17 @@
+<script>
+    let instar = prompt("nhập vào tên 1 ngôi sao")
+    let star1 = [ "Polaris" , "Aldebaran" , "Deneb", "Vega" , "Altair" , "Dubhe", "Regulus" ];
+    let star2 = [ "Ursa Minor" , "Tarurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo"];
+    function supperstar() {
+        for (i = 0; i < star1.length; i++){
+            if (instar === star1[i]){
+                let result = star1[i]+ " " + "là" + " " + star2[i];
+                return result
+                break;
+            }
+        }return false
+    }
+    if (supperstar(instar) === false){
+        document.write("ngôi sao bạn nhập không có trong từ điển của chúng tôi")
+    }
+</script>

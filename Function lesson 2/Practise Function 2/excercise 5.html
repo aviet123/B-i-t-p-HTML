@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Min(a,b,c) {
+        let min = a;
+        if (min > b){
+            min = b;
+        }if (min > c){
+            min = c;
+        }
+        return min;
+    }
+    let A = +prompt('nhập a');
+    let B = +prompt('nhập b');
+    let C = +prompt('nhập c');
+    let result = Min(A,B,C);
+    alert('số bé nhất là' + result)
+</script>
+</body>
+</html>
