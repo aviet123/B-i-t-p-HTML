@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            background-color: #cccccc;
+            width: 400px;
+            height: 60px;
+            text-align: center;
+        }
+        #product{
+            width: 300px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #result{
+            height: auto;
+            width: 50%;
+        }
+        td{
+            border-radius: 5px;
+            width: 400px;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+        table{
+            border-collapse: collapse;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body onload="display_product()">
+<h1>Add New Product</h1>
+<div id="div1">
+    <input type="text" id="product" placeholder="new product">
+    <button type="button" onclick="add_product()">Add</button>
+</div>
+<div id="result"></div>
+</body>
+<script src="manage_product.js"></script>
+</html>
