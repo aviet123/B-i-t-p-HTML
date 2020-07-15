@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function conVertCelsius(celsius) {
+        this.celsius = celsius;
+
+        this.ConvertCtoF = function () {
+            return (celsius*9)/5 + 32;
+
+        }
+        this.ConvertCtoK = function () {
+            return celsius + 273.15;
+
+        }
+    }
+
+    let convert = new conVertCelsius(25);
+    let convertCof = convert.ConvertCtoF();
+    let convertCtok = convert.ConvertCtoK();
+    if (convert.celsius > -273){
+        document.write('độ F là: ' +convertCof+'<br>');
+        document.write('độ K là: ' +convertCtok);
+    }else {
+        alert('nhiệt độ đã đạt min không thể đổi')
+    }
+</script>
+</body>
+</html>

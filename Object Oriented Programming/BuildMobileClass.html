@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function  Mobile (id, name) {
+        this.id = id;
+        this.name = name
+        this.message = '';
+        this.pinStatus = 100;
+        this.checkOnAndOff = false;
+        this.inbox =[];
+        this.textSent = [];
+
+        this.checkedTurn = function () {
+            if (this.checkOnAndOff === true){
+                alert('điện thoại đã được bật');
+            }else {
+                alert('điện thoại đã tắt');
+            }
+
+        }
+        this.setText = function () {
+            let messageE = prompt("");
+            this.message = messageE;
+
+        }
+        this.turnOffAndOn = function () {
+            this.checkOnAndOff = !this.checkOnAndOff;
+
+        }
+        this.saveDraft = function () {
+            this.pinStatus--;
+            return this.message;
+        }
+        this.chargingPin = function () {
+            this.pinStatus = 100;
+        }
+        this.getText = function (message) {
+            if (this.checkOnAndOff === false) return;
+            this.pinStatus--;
+            this.inbox.push(message)
+        }
+        this.sendText = function (mobile) {
+            if (this.checkOnAndOff === false) return;
+            this.pinStatus--;
+            this.setText();
+            this.textSent.push(this.message);
+            mobile.getText(this.message);
+        }
+        this.checkInbox = function () {
+            if (this.checkOnAndOff === false) return;
+            this.pinStatus--;
+            return this.inbox;
+
+        }
+        this.checkMessSent = function () {
+            if (this.checkOnAndOff === false) return;
+            this.pinStatus--;
+            return this.textSent;
+
+        }
+    }
+    let iphone = new Mobile(1, 'iphone');
+    let android = new Mobile(2, 'samsung');
+    iphone.turnOffAndOn();
+    android.turnOffAndOn();
+    iphone.checkedTurn();
+    iphone.sendText(android);
+    let Message = android.checkInbox();
+    console.log(Message);
+    console.log(iphone.checkMessSent());
+    console.log(iphone.pinStatus);
+    iphone.chargingPin();
+    console.log(iphone.pinStatus);
+</script>
+</body>
+</html>

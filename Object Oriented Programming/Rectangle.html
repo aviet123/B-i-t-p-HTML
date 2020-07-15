@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1300" height="600" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Rectangle = function(width,height) {
+        this.width = width;
+        this.height = height;
+
+        this.dienTich = function () {
+            return width * height;
+
+        }
+        this.chuVi = function () {
+            return 2 * (width + height);
+        }
+        this.creatRectangle = function () {
+                var ctx = document.getElementById('myCanvas').getContext('2d');
+                ctx.beginPath();
+                ctx.rect(Math.random()*200,Math.random()*300,width,height);
+                ctx.stroke();
+
+
+            }
+    }
+    let rectangle = new Rectangle(Math.random()*600,Math.random()*700);
+    let dt = rectangle.dienTich();
+    let chuvi = rectangle.chuVi();
+    alert('diện tích là '+dt+'chu vi là '+chuvi);
+    rectangle.creatRectangle();
+
+
+</script>
+</body>
+</html>
