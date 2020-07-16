@@ -69,9 +69,14 @@
     iphone.turnOffAndOn();
     android.turnOffAndOn();
     iphone.checkedTurn();
-    iphone.sendText(android);
-    let Message = android.checkInbox();
-    console.log(Message);
+    while (true) {
+        iphone.sendText(android);
+        android.checkInbox();
+        iphone.saveDraft();
+        let exit = confirm('có muốn tiếp tục không');
+        if (!exit) break;
+    }
+    console.log(android.checkInbox());
     console.log(iphone.checkMessSent());
     console.log(iphone.pinStatus);
     iphone.chargingPin();

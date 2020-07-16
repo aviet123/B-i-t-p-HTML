@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Apple (weight) {
+        this.weight = weight;
+
+        this.decrease = function () {
+            this.weight--;
+
+        }
+        this.getWeight = function () {
+           return this.weight 
+
+        }
+        this.setWeight = function (weight) {
+             this.weight = weight;
+
+        }
+        this.isEmpty = function () {
+            return ' tao da het '
+
+        }
+
+    }
+    function Human (name,gender,weight,say) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.talk = say;
+
+        this.isMale = function () {
+            this.gender = this.gender ? 'nam' : 'nu';
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        }
+        this.getWeight = function () {
+            return this.weight;
+
+        }
+        this.setGender = function (gender) {
+            this.gender = gender;
+        }
+        this.saySomeThing = function (say) {
+            this.talk = say;
+        }
+        this.eat = function (tao) {
+            if (tao.weight === 0) return;
+            this.weight++;
+            tao.weight--;
+        }
+        this.getName = function () {
+            return this.name
+        }
+        this.setName = function (name) {
+            this.name = name;
+        }
+
+    }
+    var tao  = new Apple(5);
+    var human = new Human('nguyen van a',true,50,'i am a superman');
+    var human1 = new Human('nguyen van b',false,50,'i am a superwoman');
+    human.isMale();
+    human1.isMale();
+    while(tao.weight > 0){
+        human.eat(tao);
+    }
+    if (tao === 0){
+        tao.isEmpty();
+    }
+    console.log(tao);
+    console.log('ho va ten: '+human.name +'/'+' can nang: ' +human.weight +'/'+' gioi tinh: '+human.gender);
+    console.log('ho va ten: '+human1.name +'/'+' can nang: ' +human1.weight +'/'+' gioi tinh: '+human1.gender);
+</script>
+</body>
+</html>
