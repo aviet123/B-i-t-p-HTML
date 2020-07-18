@@ -49,6 +49,9 @@
         this.saySomeThing = function (say) {
             this.talk = say;
         }
+        this.setSaying = function () {
+
+        }
         this.eat = function (tao) {
             if (tao.weight === 0) return;
             this.weight++;
@@ -73,6 +76,9 @@
     if (tao === 0){
         tao.isEmpty();
     }
+    human.setName('dinh quoc viet');
+    human.setGender('nu');
+    human.setWeight(100)
     console.log(tao);
     console.log('ho va ten: '+human.name +'/'+' can nang: ' +human.weight +'/'+' gioi tinh: '+human.gender);
     console.log('ho va ten: '+human1.name +'/'+' can nang: ' +human1.weight +'/'+' gioi tinh: '+human1.gender);
