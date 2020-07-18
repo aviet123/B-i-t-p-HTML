@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Remote(id) {
+        this.id = id;
+
+        this.switchChannel = function (tv,channel) {
+            if (tv.status === false) return;
+            tv.curchannel = channel;
+        }
+        this.changeVolumebyRm = function (tv,volume) {
+            if (tv.status === false) return;
+            tv.curvolume += volume;
+        }
+        this.switchOnAndOff = function (tv) {
+            tv.status = !tv.status;
+        }
+        this.decreaseVolume = function (tv,volume) {
+            if (tv.status === false) return;
+            tv.curvolume -= volume;
+
+        }
+
+    }
+    function Television (id) {
+        this.id = id;
+        this.curchannel = 'kenh 7';
+        this.curvolume = 0;
+        this.status = false;
+
+    }
+    let remote = new Remote(1);
+    let tv = new Television(1);
+    remote.switchOnAndOff(tv);
+    remote.switchChannel(tv,'kenh 2');
+    remote.changeVolumebyRm(tv,3);
+    remote.changeVolumebyRm(tv,3);
+    remote.switchChannel(tv,'kenh 8');
+    remote.decreaseVolume(tv,2);
+    remote.switchOnAndOff(tv);
+    remote.switchChannel(tv,'kenh 2');
+
+
+    console.log(tv);
+
+</script>
+</body>
+</html>
