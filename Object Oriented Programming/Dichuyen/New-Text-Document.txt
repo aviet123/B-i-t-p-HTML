@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bongden</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <input type="text" disabled id="status" value="1">
+            </td>
+            <td>
+                <input type="button" value="on" onclick="objLamp.turnOn()">
+            </td>
+            <td>
+                <input type="button" value="off"onclick="objLamp.turnOff()">
+            </td>
+        </tr>
+    </table>
+    <script>
+        let Lamp = function (nameLamp) {
+            this.nameLamp = nameLamp;
+
+            this.turnOn = function () {
+              console.log('đèn đã bật');
+            }
+            this.turnOff = function () {
+              console.log('đèn đã tắt');
+            }
+        }
+        let objLamp = new Lamp();
+        objLamp.turnOn();
+        objLamp.turnOff();
+    </script>
+</body>
+</html>
